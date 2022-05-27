@@ -1,0 +1,49 @@
+
+2022-05-19 15:41:29.207|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-1|job '10003236' will be execute
+2022-05-19 15:41:29.607|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|INFO |taskExecutor-1|载入算法脚本...
+2022-05-19 15:41:29.633|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|INFO |taskExecutor-1|开始运行算法
+2022-05-19 15:41:29.717|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.pyserve.PySftpProgressMonitor|INFO |pool-3-thread-1|exec command: export LANG=zh_CN.UTF-8;export LC_CTYPE=zh_CN.UTF-8;export LC_ALL=zh_CN.UTF-8; python3 /tmp/pyserve/562c54a4-d0e6-45e5-b82b-3150aed0833c.py 1>&1 2>&2
+2022-05-19 15:41:34.131|[,]|com.weibo.api.motan.log.DefaultLogService|INFO |pool-6-thread-1|[motan-totalAccessStatistic] app: motan module: motan total_count: 0 slow_count: 0 biz_excp: 0 other_excp: 0 avg_time: 0.00ms biz_time: 0.00ms avg_tps: 0
+2022-05-19 15:41:34.132|[,]|com.weibo.api.motan.log.DefaultLogService|INFO |pool-6-thread-1|[motan-memoryStatistic] 1130.92MB of 3641.00 MB (31.1%) used 
+2022-05-19 15:41:34.132|[,]|com.weibo.api.motan.log.DefaultLogService|INFO |pool-6-thread-1|[motan-statisticCallback] identity: motan://192.168.55.197:10001/default_rpc/com.yzx.mlp.scheduling.core.service.SchedulingMessageService/1.0/service connectionCount: 3 taskCount: 0 queueCount: 0 maxThreadCount: 200 maxTaskCount: 200
+2022-05-19 15:41:39.723|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.pyserve.PySession|INFO |taskExecutor-1|python 算法执行完毕...
+2022-05-19 15:41:39.723|[,]|org.quartz.plugins.history.LoggingJobHistoryPlugin|INFO |taskExecutor-1|Job [V51a3g0NRNqklUn3u4NwZw.10003236] execution complete and reports: null
+2022-05-19 15:41:39.724|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-1|jobWasExecuted...
+2022-05-19 15:41:39.724|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-1|job full id: V51a3g0NRNqklUn3u4NwZw.10003236
+2022-05-19 15:41:39.729|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-4|客户端ID: 5879a32c-e72f-4f15-ba87-cf0d63662f93
+2022-05-19 15:41:39.729|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-4|ID: V51a3g0NRNqklUn3u4NwZw, 节点状态: {"category":"WORKFLOW","nodeId":"10003236","state":"COMPLETE","type":"NODE","workFlowId":"V51a3g0NRNqklUn3u4NwZw"}
+2022-05-19 15:41:39.730|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-4|推送成功...
+2022-05-19 15:41:40.651|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-2|客户端ID: 5879a32c-e72f-4f15-ba87-cf0d63662f93
+2022-05-19 15:41:40.651|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-2|ID: V51a3g0NRNqklUn3u4NwZw, 节点状态: {"category":"WORKFLOW","nodeId":"10003236_0_2_10003238_1_1","state":"RUNNING","type":"LINK","workFlowId":"V51a3g0NRNqklUn3u4NwZw"}
+2022-05-19 15:41:40.652|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-2|推送成功...
+2022-05-19 15:41:40.658|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-3|客户端ID: 5879a32c-e72f-4f15-ba87-cf0d63662f93
+2022-05-19 15:41:40.659|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-3|ID: V51a3g0NRNqklUn3u4NwZw, 节点状态: {"category":"WORKFLOW","nodeId":"10003236_0_1_10003239_1_1","state":"RUNNING","type":"LINK","workFlowId":"V51a3g0NRNqklUn3u4NwZw"}
+2022-05-19 15:41:40.659|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-3|推送成功...
+2022-05-19 15:41:49.160|[,]|com.yzx.mlp.scheduling.core.quartz.JobProvider|INFO |pool-34-thread-1|job will execute at: 2022-05-19 15:41:50
+2022-05-19 15:41:49.177|[,]|com.yzx.mlp.scheduling.core.quartz.JobProvider|INFO |pool-35-thread-1|job will execute at: 2022-05-19 15:41:50
+2022-05-19 15:41:49.215|[,]|com.yzx.mlp.scheduling.core.quartz.JobProvider|INFO |pool-34-thread-1|jobName: 10003239 triggerKey: 10003239 date: 2022-05-19 15:41:50
+2022-05-19 15:41:49.222|[,]|com.yzx.mlp.scheduling.core.quartz.JobProvider|INFO |pool-35-thread-1|jobName: 10003238 triggerKey: 10003238 date: 2022-05-19 15:41:50
+2022-05-19 15:41:50.057|[,]|org.quartz.plugins.history.LoggingJobHistoryPlugin|INFO |taskExecutor-2|Job [V51a3g0NRNqklUn3u4NwZw.10003239] to be fired by trigger [V51a3g0NRNqklUn3u4NwZw.10003239], re-fire: 0
+2022-05-19 15:41:50.063|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-5|客户端ID: 5879a32c-e72f-4f15-ba87-cf0d63662f93
+2022-05-19 15:41:50.064|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-5|ID: V51a3g0NRNqklUn3u4NwZw, 节点状态: {"category":"WORKFLOW","nodeId":"10003239","state":"RUNNING","type":"NODE","workFlowId":"V51a3g0NRNqklUn3u4NwZw"}
+2022-05-19 15:41:50.066|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-5|推送成功...
+2022-05-19 15:41:50.082|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-2|job '10003239' will be execute
+2022-05-19 15:41:50.128|[,]|org.quartz.plugins.history.LoggingJobHistoryPlugin|INFO |taskExecutor-3|Job [V51a3g0NRNqklUn3u4NwZw.10003238] to be fired by trigger [V51a3g0NRNqklUn3u4NwZw.10003238], re-fire: 0
+2022-05-19 15:41:50.135|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-6|客户端ID: 5879a32c-e72f-4f15-ba87-cf0d63662f93
+2022-05-19 15:41:50.135|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-6|ID: V51a3g0NRNqklUn3u4NwZw, 节点状态: {"category":"WORKFLOW","nodeId":"10003238","state":"RUNNING","type":"NODE","workFlowId":"V51a3g0NRNqklUn3u4NwZw"}
+2022-05-19 15:41:50.137|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-6|推送成功...
+2022-05-19 15:41:50.145|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|INFO |taskExecutor-2|载入算法脚本...
+2022-05-19 15:41:50.150|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|INFO |taskExecutor-2|开始运行算法
+2022-05-19 15:41:50.152|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-3|job '10003238' will be execute
+2022-05-19 15:41:50.210|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|INFO |taskExecutor-3|载入算法脚本...
+2022-05-19 15:41:50.214|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|INFO |taskExecutor-3|开始运行算法
+2022-05-19 15:41:50.246|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.pyserve.PySftpProgressMonitor|INFO |pool-3-thread-2|exec command: export LANG=zh_CN.UTF-8;export LC_CTYPE=zh_CN.UTF-8;export LC_ALL=zh_CN.UTF-8; python3 /tmp/pyserve/ffbf6db7-bd8a-4c2e-8382-68d40b10ea13.py 1>&1 2>&2
+2022-05-19 15:41:50.323|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.pyserve.PySftpProgressMonitor|INFO |pool-3-thread-3|exec command: export LANG=zh_CN.UTF-8;export LC_CTYPE=zh_CN.UTF-8;export LC_ALL=zh_CN.UTF-8; python3 /tmp/pyserve/2c2ae2b7-1154-4c5f-97e1-576e29087937.py 1>&1 2>&2
+2022-05-19 15:42:00.326|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.pyserve.PySession|INFO |taskExecutor-3|python 算法执行完毕...
+2022-05-19 15:42:00.356|[,]|com.yzx.mlp.scheduling.core.alog.unparallel.engine.pythonengine.evaluate.PyExecutor|ERROR|taskExecutor-3|execute python script failed, error message:Traceback (most recent call last):<br>
+2022-05-19 15:42:00.360|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-3|jobWasExecuted...
+2022-05-19 15:42:00.361|[,]|com.yzx.mlp.scheduling.core.listener.WorkFlowJobListener|INFO |taskExecutor-3|job full id: V51a3g0NRNqklUn3u4NwZw.10003238
+2022-05-19 15:42:00.365|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-7|客户端ID: 5879a32c-e72f-4f15-ba87-cf0d63662f93
+2022-05-19 15:42:00.365|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-7|ID: V51a3g0NRNqklUn3u4NwZw, 节点状态: {"category":"WORKFLOW","nodeId":"10003238","state":"ERROR","type":"NODE","workFlowId":"V51a3g0NRNqklUn3u4NwZw"}
+2022-05-19 15:42:00.366|[,]|com.yzx.mlp.common.websocket.SocketServer|INFO |NettyServer-192.168.55.197:10001-3-thread-7|推送成功...
+2022-05-19 15:42:01.245|[,]|com.yzx.mlp.scheduling.core.quartz.JobProvider$1|ERROR|pool-28-thread-3|Job运行错误，id: 10003238

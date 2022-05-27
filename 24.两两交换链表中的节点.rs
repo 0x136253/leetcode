@@ -1,31 +1,31 @@
 /*
- * @lc app=leetcode.cn id=29 lang=rust
+ * @lc app=leetcode.cn id=24 lang=rust
  *
- * [29] 两数相除
+ * [24] 两两交换链表中的节点
  */
 
 // @lc code=start
-mod list_node;
-use crate::list_node::*;
-
-// use leetcode_debug::list_node::*;
-struct Solution {}
-
-fn main() {
-    print!(
-        "{:?}",
-        Solution::swap_pairs(build_listnode(vec![1,2,3,4,5]))
-    );
-}
-
+// Definition for singly-linked list.
+// #[derive(PartialEq, Eq, Clone, Debug)]
+// pub struct ListNode {
+//   pub val: i32,
+//   pub next: Option<Box<ListNode>>
+// }
+//
+// impl ListNode {
+//   #[inline]
+//   fn new(val: i32) -> Self {
+//     ListNode {
+//       next: None,
+//       val
+//     }
+//   }
+// }
 impl Solution {
-    pub fn swap_pairs(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut list = ListNode::new(0);
         let mut tail = &mut list.next;
 
-        let ref mut t = 8;
-        *t= *t + 1;
-        // let cx = &mut list.next;
         let mut temp = None;
         while let Some(mut node) = head.take() {
             head = node.next.take();
@@ -46,3 +46,5 @@ impl Solution {
         list.next.take()
     }
 }
+// @lc code=end
+

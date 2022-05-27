@@ -7,23 +7,17 @@
 // @lc code=start
 impl Solution {
     pub fn is_valid(s: String) -> bool {
-        let (mut x, mut y, mut z) = (0, 0, 0);
-        for c in s.chars(){
-            match c {
-                '(' => x += 1,
-                ')' => x -= 1,
-                '[' => y += 1,
-                ']' => y -= 1,
-                '{' => z += 1,
-                '}' => z -= 1,
-                _  => (),
-            };
+        let mut queue = vec![];
+        for i in s.chars() {
+            match i {
+                '(' => queue.push(')'),
+                '[' => queue.push(']'),
+                '{' => queue.push('}'),
+                ')' | ']' | '}' if Some(i) != queue.pop() => return false,
+                _ => ()
+            }
         }
-
-        if x == 0 && y == 0 && z == 0 {
-            return true;
-        }
-        return false;
+        return queue.is_empty();
     }
 }
 // @lc code=end
