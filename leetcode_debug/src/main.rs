@@ -13,8 +13,8 @@ struct Solution {}
 
 fn main() {
     print!(
-        "{:?}",
-        Solution::swap_pairs(build_listnode(vec![1,2,3,4,5]))
+        "{}",
+        Solution::swap_pairs(build_listnode(vec![1,2,3,4,5])).unwrap()
     );
 }
 
@@ -23,26 +23,24 @@ impl Solution {
         let mut list = ListNode::new(0);
         let mut tail = &mut list.next;
 
-        let ref mut t = 8;
-        *t= *t + 1;
-        // let cx = &mut list.next;
-        let mut temp = None;
-        while let Some(mut node) = head.take() {
-            head = node.next.take();
+        let mut pre = None;
+        while let Some(mut now) = head.take() {
+            head = now.next.take();
 
-            match temp.take(){
-                None => temp = Some(node),
-                Some(temp) => {
-                    node.next = Some(temp);
-                    *tail = Some(node);
+            match pre.take(){
+                None => pre = Some(now),
+                Some(pre) => {
+                    now.next = Some(pre);
+                    *tail = Some(now);
                     tail = &mut tail
                         .as_mut().unwrap().next
                         .as_mut().unwrap().next;
                 }
             }
+
         }
 
-        *tail = temp;
+        *tail = pre;
         list.next.take()
     }
 }

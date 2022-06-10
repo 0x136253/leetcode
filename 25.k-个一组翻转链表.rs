@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=24 lang=rust
+ * @lc app=leetcode.cn id=25 lang=rust
  *
- * [24] 两两交换链表中的节点
+ * [25] K 个一组翻转链表
  */
 
 // @lc code=start
@@ -22,28 +22,32 @@
 //   }
 // }
 impl Solution {
-    pub fn swap_pairs(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    pub fn reverse_k_group(mut head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
         let mut list = ListNode::new(0);
         let mut tail = &mut list.next;
-
+        
         let mut pre = None;
+        let mut cnt = 0;
         while let Some(mut now) = head.take() {
             head = now.next.take();
 
-            match pre.take(){
-                None => pre = Some(now),
+            match pre.take() {
+                None => {
+                    pre = Some(now),
+                    cnt++;
+                },
                 Some(pre) => {
-                    now.next = Some(pre);
-                    *tail = Some(now);
-                    tail = &mut tail
-                        .as_mut().unwrap().next
-                        .as_mut().unwrap().next;
+                    now.next = Some(pre),
+                    cnt++;
+                    if cnt == k{
+                        *tail = pre;
+                        
+                    }else {
+                        pre = Some(now);
+                    }
                 }
             }
         }
-
-        *tail = pre;
-        list.next.take()
     }
 }
 // @lc code=end
